@@ -1,7 +1,7 @@
 
 # NEWS APP
 
-This is a simple News App developed as a part of a coding challenge. The application fetches news articles from the NewsAPI and displays them in a list view. Users can also search for news articles by keywords and can click on an article to view its details. In addition, users can bookmark articles for later viewing.
+This is a simple News App developed as a part of a Frontend Task. The application fetches news articles from the NewsAPI and displays them in a list view. Users can also search for news articles by keywords and can click on an article to view its details. In addition, users can bookmark articles for later viewing.
 
 ## Installation
 
