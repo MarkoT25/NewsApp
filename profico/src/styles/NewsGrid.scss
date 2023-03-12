@@ -1,0 +1,59 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  justify-content: center;
+  justify-items: center;
+  max-width: 1100px;
+  padding: 2.5em;
+  margin-top: 55px;
+
+  @include article-breakpoint2(md) {
+    grid-template-columns: repeat(2, 1fr);
+    .widget {
+      display: none;
+    }
+  }
+  @include article-breakpoint2(sm) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 0px;
+  }
+  @include breakpoint(md2) {
+    padding: 0;
+  }
+  .widget {
+    grid-row: 1 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+.hide {
+  display: none;
+}
+.widget-show {
+  justify-content: center;
+  align-items: center;
+}
+.fav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  justify-content: center;
+  justify-items: center;
+  max-width: 1100px;
+  padding: 2.5em;
+  @include article-breakpoint2(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include article-breakpoint2(sm) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 0px;
+  }
+  @include breakpoint(md2) {
+    padding: 0;
+  }
+}

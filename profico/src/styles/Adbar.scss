@@ -1,0 +1,42 @@
+@import "./_colors.scss";
+@import "./_mixins.scss";
+
+.adbar {
+    color: $secondary-color;
+    background: $third-color;
+    @include flex-center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    left: 0;
+    @include breakpoint(md) {
+        display: none;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .get-btn {
+      background-color: $secondary-color;
+      width: 69px;
+      height: 40px;
+      border-radius: 8px;
+      border-color: transparent;
+      margin-right: 24px;
+      font-weight: bold;
+    }
+    .link {
+      text-decoration: none;
+    }
+    .nt-link {
+      color:$secondary-color;
+      font-weight: bold;
+    }
+    h5 {
+      font-weight: normal;
+    }
+  }
+

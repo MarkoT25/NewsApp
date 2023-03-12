@@ -1,0 +1,69 @@
+@mixin breakpoint($point) {
+  @if $point == md {
+    //768px
+    @media (max-width: 805px) {
+      @content;
+    }
+  } @else if $point == md2 {
+    @media (max-width: 665px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (max-width: 555px) {
+      @content;
+    }
+  }
+  @else if $point == mobmenu {
+    @media (max-width: 440px) {
+      @content;
+    }
+  }
+}
+
+@mixin article-breakpoint($point) {
+  @if $point == md {
+    //768px, 1065
+    @media (max-width: 1065px) {
+      @content;
+    }
+  } // 705
+  @else if $point == sm {
+    @media (max-width: 705px) {
+      @content;
+    }
+  } @else if $point == xs {
+    @media (max-width: 345px) {
+      @content;
+    }
+  } @else if $point == mn {
+    @media (max-width: 1355px) {
+      @content;
+    }
+  }
+}
+
+@mixin article-breakpoint2($point) {
+  @if $point == md {
+    //768px
+    @media (max-width: 1225px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (max-width: 890px) {
+      @content;
+    }
+  } @else if $point == xs {
+    @media (max-width: 345px) {
+      @content;
+    }
+  } @else if $point == mn {
+    @media (max-width: 1355px) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}

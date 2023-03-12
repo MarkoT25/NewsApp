@@ -1,0 +1,42 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+
+.widget-article-container {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    justify-content: start;
+    margin-left: 10px;
+    height: 70px;
+    max-width: 300px;
+    text-decoration: none;
+    margin-top: 8px;
+    z-index: 1;
+
+    
+    .items  {
+        justify-content: center;
+    }
+
+    .widget-article-time {
+        font-size: 10px;
+        color: #1E71BB;
+        
+    }
+    .widget-article-title {
+        font-size: 14px;
+        color: black;
+    }
+    .under-line {
+        width: 100%;
+        height: 1px;
+        mix-blend-mode: normal;
+        opacity: 0.1;
+        border: 1px solid #979797;
+        max-width: 295px;
+    }
+    .expand {
+        margin-bottom: 27px;
+    }
+
+}

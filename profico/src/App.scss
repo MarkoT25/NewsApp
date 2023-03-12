@@ -1,0 +1,43 @@
+@import "./styles/mixins.scss";
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.title3 {
+  position: relative;
+  left: 7%; //370px
+  margin-top: 3.8%; //190px
+  @include article-breakpoint2(md){
+    left: 9.5%;
+    margin-top: 5%;
+  }
+  @include article-breakpoint2(sm){
+    left: 13%;
+    margin-top: 8%;
+  }
+  @include article-breakpoint2(sm){
+    display: none;
+   }
+  @include breakpoint(md2){
+    display: none;
+  }
+}
+.hide {
+  display: none;
+}
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
