@@ -4,22 +4,25 @@ import "../styles/Header.scss";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { HiMenu } from "react-icons/hi";
 
-const Header = (props, { searchTerm, showAd }) => {
-  let word = searchTerm;
+const Header = (props) => {
+  const [word, setWord] = useState("");
 
   //SETTING SEARCH TERM FOR SEARCH FILTER
-  const addValue = (event) => {
-    props.setSearchTerm(word);
+  const addValue = () => {
+    props.setSearchTerm(word.trim());
   };
 
   //FUNCTION TO OPEN OR CLOSE MOBILE MENU
   const openMobileMenu = () => {
-    if (props.menu === false) {
-      props.setMenu(true);
-    } else {
-      props.setMenu(false);
-    }
+    props.setMenu(!props.menu);
   };
+
+  //FUNCTION TO RESET SEARCH TERM AND SHOW ALL ARTICLES
+  const resetSearchTerm = () => {
+    setWord("");
+    props.setSearchTerm("");
+  };
+
   return (
     //HEADER
     <div className={props.menu === false ? 'header' : 'h-active'}>
@@ -54,16 +57,13 @@ const Header = (props, { searchTerm, showAd }) => {
           className="input-form"
           type="text"
           placeholder="Search news"
-          value={searchTerm}
-          // onChange={(event) => props.setSearchTerm(event.target.value)}
-          onChange={(event) =>
-            event.target.value !== "" ? (word = event.target.value) : addValue()
-          }
+          value={word}
+          onChange={(event) => setWord(event.target.value)}
         />
 
         {/* INPUT SEARCH BUTTON */}
         <button className="src-btn" onClick={addValue}>
-          <Link className="link" to="/">
+          <Link className="link" to="/" onClick={resetSearchTerm}>
             SEARCH
           </Link>
         </button>
